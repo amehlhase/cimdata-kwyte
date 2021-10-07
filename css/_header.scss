@@ -1,0 +1,17 @@
+header {
+  min-height: 70px;
+
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+
+  #logo {
+    font-size: 200%;
+    text-transform: lowercase;
+    color: $color-shadow;
+
+    .fa {
+      color: $color-shadow;
+    }
+  }
+}

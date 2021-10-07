@@ -1,0 +1,24 @@
+// In dieser Datei befinden sich hilfreiche Materialien wie Divider zur optischen Trennung sowie Variablen für z.B. die Mediequeries.
+
+// DIVIDER
+
+.divider25px,
+.divider50px,
+.divider100px {
+  width: 100%;
+  _border: 1px dashed grey;
+}
+.divider25px {
+  height: 25px;
+}
+.divider50px {
+  height: 50px;
+}
+.divider100px {
+  height: 100px;
+}
+
+// MQ Variablen
+
+$mq-breakpoint-desktop: 900px;
+$mq-breakpoint-mobile: 600px;

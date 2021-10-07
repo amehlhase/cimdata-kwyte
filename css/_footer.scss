@@ -1,0 +1,31 @@
+// In dieser Datei befindet sich das Styling des Footers. Durch die Gestaltung mittels Flexbox ist hier keine MQ notwendig gewesen.
+
+footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  div {
+    min-width: 280px;
+    padding: 10px;
+    h5 {
+      padding: 5px;
+    }
+  }
+
+  ul {
+    li {
+      list-style: none;
+    }
+  }
+  .footer_socialmedia {
+    width: 60%;
+    margin: auto;
+    li {
+      display: inline-block;
+      font-size: 180%;
+      padding-left: 20px;
+    }
+  }
+}

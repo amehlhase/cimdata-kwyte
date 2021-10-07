@@ -1,0 +1,280 @@
+// In dieser Datei befinden sich die Styles für alle Teile der main-Sektion in der index.html. Geordnet sind sie nach der Reihenfolge im Dokument von oben nach unten - jeweils auch mit einem Kommentar zur Orientierung beschriftet. Am Ende ist der keyframe, der in Hero und Download benutzt wurde, zu finden.
+// Die einzelnen Areas innerhalb der main haben IDs bekommen, um hier separat angesprochen werden zu können.
+// Ich habe versucht, die meisten Grids & Flexboxen so anzulegen, dass keine separate MQ notwendig ist, sondern die Angaben
+
+main {
+  //HERO
+
+  overflow-x: hidden;
+
+  #hero {
+    position: relative;
+    width: 100%;
+    .hero {
+      width: 100%;
+    }
+
+    .hero {
+      position: relative;
+    }
+
+    .hero_text {
+      position: absolute;
+      color: $color-background;
+      text-shadow: 0 -1px 1px $color-font, 0 1px 1px $color-font;
+      font-size: 110%;
+      padding: 0 50px 0 50px;
+      width: 100%;
+      top: 10%;
+      left: 0px;
+      right: 0px;
+      text-align: center;
+    }
+
+    .button {
+      position: absolute;
+      width: 100%;
+      bottom: 15%;
+      left: 0px;
+      right: 0px;
+      text-align: center;
+
+      a {
+        background-color: $color-background;
+        text-transform: uppercase;
+        border: 5px solid $color-shadow;
+        border-radius: 10px;
+        padding: 10px;
+
+        &:hover {
+          animation: drop 5s infinite;
+        }
+      }
+    }
+  }
+
+  // ABOUT
+
+  #about {
+    h2 {
+      padding-bottom: 20px;
+    }
+    .about_text {
+      width: 100%;
+      column-width: 220px;
+      text-align: justify;
+      break-inside: avoid;
+      padding: 10px;
+
+      &::after {
+        content: " \2665";
+      }
+    }
+    img {
+      float: left;
+      height: 100%;
+      border-radius: 10px;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+    }
+
+    .cards {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: row;
+      flex-grow: 1;
+      flex-wrap: wrap;
+
+      @media screen and (min-width: $mq-breakpoint-mobile) {
+        flex-wrap: nowrap;
+
+        h4 {
+          min-height: 30px;
+        }
+
+        .card {
+          min-height: 200px;
+        }
+      }
+
+      .card {
+        min-width: 220px;
+        margin: 5px;
+        padding: 5px;
+        border: 2px dashed $color-highlight-dark;
+        border-radius: 5px;
+
+        h4 {
+          font-size: 100%;
+          font-weight: 600;
+          text-align: left;
+          min-height: 40px;
+        }
+
+        p {
+          text-align: justify;
+          break-inside: avoid;
+        }
+
+        &::before {
+          content: "\2605 \2605 \2605 \2605 \2605";
+          color: $color-highlight-light;
+        }
+      }
+    }
+  }
+
+  // DOWNLOAD
+
+  #download {
+    svg {
+      width: 100%;
+      max-height: 400px;
+      margin: 0 auto;
+    }
+
+    .button {
+      margin-top: 25px;
+      width: 100%;
+      bottom: 15%;
+      left: 0px;
+      right: 0px;
+      text-align: center;
+
+      a {
+        background-color: $color-background;
+        text-transform: uppercase;
+        border: 5px solid $color-shadow;
+        border-radius: 10px;
+        padding: 10px;
+
+        &:hover {
+          animation: drop 5s infinite;
+        }
+      }
+    }
+  }
+
+  // SCREENSHOTS
+
+  #screenshots {
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+      gap: 0.5em;
+    }
+
+    img {
+      height: 450px;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 10px;
+    }
+  }
+
+  // TEAM
+
+  #team {
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+      gap: 0.5em;
+
+      .card {
+        border: 1px solid $color-highlight-dark;
+        border-radius: 10px;
+        img {
+          height: 400px;
+          object-fit: cover;
+          object-position: top;
+          border-radius: 10px;
+        }
+
+        h3 {
+          padding: 5px;
+        }
+
+        p {
+          padding: 5px;
+          text-align: justify;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  // KONTAKTFORMULAR
+
+  #kontakt {
+    form {
+      fieldset {
+        margin: 0 auto;
+        overflow-x: hidden;
+        border: 2px dashed $color-highlight-dark;
+        border-radius: 2px;
+
+        legend {
+          font-weight: bold;
+          padding: 5px;
+        }
+      }
+
+      .form_elements {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 2fr));
+        gap: 1em;
+
+        label {
+          padding: 5px;
+          display: inline-block;
+          width: 150px;
+        }
+
+        input,
+        textarea {
+          margin: 2px;
+          padding: 5px;
+          border: 1px solid $color-shadow;
+          border-radius: 5px;
+        }
+
+        textarea {
+          resize: none;
+        }
+
+        .button {
+          height: 50px;
+          width: 220px;
+          background-color: $color-background;
+          text-transform: uppercase;
+          border: 5px solid $color-shadow;
+          border-radius: 10px;
+          padding: 10px;
+        }
+      }
+    }
+  }
+
+  // KEYFRAME
+
+  @keyframes drop {
+    0% {
+      background-color: $color-background;
+      padding: 10px;
+    }
+    50% {
+      padding: 15px;
+      background-color: $color-shadow;
+      color: $color-background;
+    }
+    100% {
+      background-color: $color-background;
+      padding: 10px;
+    }
+  }
+}

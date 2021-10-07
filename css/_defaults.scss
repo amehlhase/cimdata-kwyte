@@ -1,0 +1,31 @@
+// Grundeinstellungen, die auf jedes Element im Projekt angewendet werden sollen (und sich für mich in mehreren Projekten wiederholen), z.B. eine mittige Ausrichtung des Bodys mit einer Maximalbreite von 950px oder die Festlegung, dass alle (Fließ-)Texte standardmäßig 100% der Größe des User-Browsers entsprechen.
+
+* {
+  font-family: "Roboto", sans-serif;
+  color: $color-font;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: inside;
+  text-decoration: none;
+}
+
+// HTML & BODY
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 950px;
+}
+
+// BILDER:
+
+img {
+  display: block;
+  width: 100%;
+}
